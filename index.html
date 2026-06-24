@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Family house</title>
+</head>
+
+<body class="no-scroll">
+  
+  <div id="modifyingContainer"></div>
+  
+  <div id="intro-page" class="screen">
+    <img src="1.png" alt="logo" id="intro-img">
+    <h3 id="intro-Text">Family house🏠</h3>
+  </div>
+  
+  <div class="container">
+        <div class="setting-bar">
+            <button id="langBtn" onclick="toggleLanguage()">🇲🇲 MM</button>
+        </div>
+  
+        <div id="mainPage" class="page active-page">
+            <h2 id="title">သင့်ရဲ့ ခံစားချက်ကို မျှဝေလိုက်ပါ</h2>
+            <div id="feedTitle" class="feed-title">နောက်ဆုံးတင်ထားသော post များ</div>
+            <div id="postFeed"></div>
+        </div>
+
+        <div id="commentPage" class="page">
+            <button id="backBtn" class="back-btn" onclick="goToMainPage()">← နောက်သို့ ပြန်သွားရန်</button>
+            
+            <div id="focusedPostText" class="focused-post"></div>
+            
+            <h3 id="commentTitle" style="color: #0088cc; margin-bottom: 10px;">💬 အားပေးစကားများ</h3>
+            <div id="commentList"></div>
+            
+            <div class="comment-input-box">
+                <input type="text" id="commentText" class="comment-input" placeholder="နွေးထွေးတဲ့ အားပေးစကားလေး ရေးပေးလိုက်ပါ...">
+                <button id="commentSubmitBtn" class="comment-submit-btn" onclick="submitComment()">ပို့မည်</button>
+            </div>
+        </div>
+  </div>
+  
+  <button id="open-create-post-btn">➕</button>
+
+  <div id="createPostScreen" class="screen" style="display: none;">
+    <button id="close-create-post-btn">👈</button>
+    
+    <div class="create-post-container">
+        <h2 style="color: #16213e; text-align: center; margin-bottom: 20px;">ရင်ဖွင့်စာအသစ် ရေးမည်</h2>
+        <div class="post-box">
+            <textarea id="postText" placeholder="မိသားစုဝင်တွေဟာ တစ်ယောက်ကိုတစ်ယောက် ကူညီဖေးမဖို့ အမြဲအသင့်ရှိနေပါတယ်..."></textarea>
+            <button id="postBtn" onclick="submitPost()">Post တင်မယ်</button>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+  </div>
+
+  <button id="setting-btn">📕</button>
+  
+  <div id="rulescreen" class="screen">
+    <button id="backarrow-btn">👈</button>
+    <h2 id="main-title">The rules of the application</h2>
+    
+    <div class="rule1">
+      <h3 id="1rule">ဒီ application ကို နေ့စဉ်ပုံမှန် သုံးရမယ်</h3>
+    </div>
+    
+    <div class="rule2">
+      <h3 id="2rule">ပြဿနာ, မွန်းကျပ်နေတဲ့ အရာတွေ မှန်သမျှကို ပေြာပြရမယ်</h3>
+    </div>
+  </div>
+
+  <div id="customAlert" class="custom-modal">
+    <div class="modal-content">
+      <p id="alertMessage">မက်ဆေ့ခ်ျ စာသား...</p>
+      <div class="modal-buttons">
+        <button id="alertCancelBtn" style="background: #3a3b3c; display: none;">CANCEL</button>
+        <button id="alertOkBtn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
