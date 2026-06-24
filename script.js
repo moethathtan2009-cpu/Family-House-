@@ -141,8 +141,8 @@ function showCustomConfirm(message) {
 }
 
 
-// ====== 🌐 API SERVER CONFIGURATION ======
-const BASE_URL = "https://family-house-ylaz.onrender.com"; 
+// ====== 🌐 API SERVER CONFIGURATION (လင့်ခ်အသစ် ပြင်ဆင်ပြီး) ======
+const BASE_URL = "https://family-house-1.onrender.com"; 
 const API_URL = `${BASE_URL}/api/posts`;
 let allPosts = []; 
 let currentPostId = null; 
